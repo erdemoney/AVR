@@ -1,0 +1,10 @@
+sudo avrdude -c usbtiny -p m328p -b 115200 -U efuse:w:efuse.hex:a -B250
+sudo avrdude -c usbtiny -p m328p -b 115200 -U hfuse:w:hfuse.hex:a -B250
+sudo avrdude -c usbtiny -p m328p -b 115200 -U lfuse:w:lfuse.hex:a -B250
+sudo avrdude -c usbtiny -p m328p -b 115200 -U flash:w:bootloader.hex:a
+
+exit
+
+
+sudo avrdude -c usbtiny -p m328p -b 115200 -U lfuse:w:lfuse_EXTERNAL_FULL_SWING_OSCILLATOR.hex:a    -B250
+sudo avrdude -c usbtiny -p m328p -b 115200 -U lfuse:w:lfuse_INTERNAL_8MHz_OSCILLATOR.hex:a          -B250

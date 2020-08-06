@@ -1,0 +1,13 @@
+IR beam software for Mike Hobbs' salamander thresholds
+======================================================
+
+
+Version 1.0
+-----------
+This version watches for beam interruption by sending 16 times per sec a 15-pulse 38KHz strobe, at the end checking if a falling edge has happend on the IR receiver, this using the AVR's analog comparator. If such a falling edge has been detected then the beam apparently is not interrupted, otherwise 'appropriate action' is taken. It seems that a 10-pulse strobe is just enough to give receiver detection, but 5 additional pulses are given for safety, especially while the design of the detection hardware and software is still in flux.
+
+The intention is to switch the receiver on just before the strobe, off again after falling flank detection. However, this does not appear to work in brighter daylight: the receiver responds even if the IR transmitter LED has been decoupled. Because the detector works perfectly even in bright sunlight when the receiver is left powered on, we must conclude that the receiver is in an unstable state just after power on, amplifying circuit noise (chip voltage fluctuations by a switching timer), thereby giving false detections. More investigation using the logic analyzer is required here, and this version disables switching the receiver off.
+
+This version checks for a falling receiver flank while senting out the 15 strobe transmitter pulse. One problem here is that receivers appear unstable during the first two transmitter strobes, simetimes causing a voltage spike with falling edge during that time. Therefore some software logic is used to ignore such flanks the first few cycles. However, all we need to know is the receiver value at the end of the IR pulse, so an improvement/simplification will be to simply test the analog comparator output, getting rid of the correction logic.
+
+

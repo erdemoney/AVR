@@ -1,0 +1,9 @@
+stdIRPulse.c:174:29:wakeStrober1	4	static
+stdIRPulse.c:168:29:wakeStrober0	4	static
+stdIRPulse.c:30:13:IRLevelSwitch	2	static
+stdIRPulse.c:193:13:pulseTimerCOMPA	7	static
+stdIRPulse.c:48:6:IRPulseStart	2	static
+stdIRPulse.c:118:6:IRPulseStop	2	static
+stdIRPulse.c:238:6:IRPulseTimer0COMPA	2	static
+stdIRPulse.c:239:6:IRPulseTimer1COMPA	2	static
+stdIRPulse.c:242:6:IRSendNECCode	10	static

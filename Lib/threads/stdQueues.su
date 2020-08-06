@@ -1,0 +1,4 @@
+stdQueues.c:36:6:stdQueuePut	6	static
+stdQueues.c:57:6:stdQueueTryPut	6	static
+stdQueues.c:81:6:stdQueueGet	6	static
+stdQueues.c:102:6:stdQueueTryGet	6	static

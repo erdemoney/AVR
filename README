@@ -1,0 +1,98 @@
+
+CONTENTS:
+========
+
+
+archive
+-------
+     Some pictures, docs, keepsakes and ATMega boot burning procedures
+
+
+threadsLib
+----------
+     stdTypes, Threads, stdInterrupts : threading library. 
+                                        For usage see stdThreads.h and examples below
+                                        
+     other sources in this dir        : copied from NerkKits and made reentrant
+
+
+Demo programs:
+-------------
+
+    sanityTest
+    ----------
+         Simple serial LED blinker to test sanity of a newly wired NerdKits board
+
+
+    tasksDemo
+    ---------
+         Multi-threading  demonstration, with different threads writing in (quasi) parallel 
+         to areas that they own on the NerdKits lcd screen. Also showing binary number counting
+         (of course by a separate thread) on PC0..3.
+
+
+    timeCtxSwitch
+    -------------
+         Test program for measuring thread context switches
+
+
+    uartSanityTest
+    --------------
+         Some more involved sanity test, also including the uart
+
+
+
+Projects:
+--------
+    LEDDisplayDriverDemo
+    --------------------
+         Sample driver for a 2-digit LED display. See pictures in archive/.
+         In order to economize on AVR IO pins, the corresponding segment pins
+         are connected, and the digits are rapidly and alternately shown.
+         Also some fun code is added to alternately dim and brighten digit
+         brightness. The application shows the current temperature by
+         reading the LM34 temperature sensor.
+
+
+    IRbeam
+    ------
+         Ultra low power IR pulse transmitter and receiver. This is an application for
+         Mike Hobbs's salamander traps, which take pictures based on observed interruptions
+         of the beam.
+
+
+    IRreceiver
+    ----------
+         Test bench for IR remote receiving.
+
+
+    IRfrustrator
+    ------------
+         Sample app for IR remote receiving and sending: monitor IR remote commands and 
+         transmit random samples at random times. Great for leaving in the room when
+         people are watching television.
+
+
+    ledArray
+    --------
+         Sample driver for a home built 5x5 led display grid.
+
+
+    shiftRegister
+    -------------
+         Sample driver for inputting a sequence of bits into a 74595 shift register,
+         optionally using explicit GPIO pin toggling, or using the SPI
+
+
+
+
+Note that Makefile doesn't make anything, it only clears all of the subdirectories.
+The Makefile in the different application directories actually do build everything needed, and
+starts avrdude upon successful build. Make sure you have sudo privileges (Linux). The mechanics 
+of all of that is in Makefile.inc. That file also allows configuring the MMCU (atmega168 or atmega328p),
+and the frequencies of chip clock and kernel timer.
+
+Also, note that stdSetup() shuts down all unused devices. If any of them need to be used
+by the application then they need to be reenabled. See thread kernel implementation stdThreads.h/.c
+
+    PRR= (1<<PRTWI) | (1<<PRTIM2) | (1<<PRTIM1) | (1<<PRSPI) | (1<<PRUSART0) | (1<<PRADC);

@@ -1,0 +1,14 @@
+stdThreads.c:40:13:enQueue	4	static
+stdThreads.c:317:17:stdTimerHandler	6	static
+stdThreads.c:148:13:deschedule	6	static
+stdThreads.c:73:6:stdSleepPrevent	2	static
+stdThreads.c:167:6:stdReschedule	4	static
+stdThreads.c:190:6:stdThreadSuspendSelf	2	static
+stdThreads.c:212:6:stdThreadResume	4	static
+stdThreads.c:234:6:stdSemP	2	static
+stdThreads.c:268:6:stdSemTryP	2	static
+stdThreads.c:292:6:stdSemV	4	static
+stdThreads.c:362:6:stdThreadSleep	4	static
+stdThreads.c:403:8:stdTime	2	static
+stdThreads.c:436:5:__vector_7	17	static
+stdThreads.c:518:6:stdSetup	2	static

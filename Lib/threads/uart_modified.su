@@ -1,0 +1,10 @@
+uart_modified.c:17:13:uartTXHandler	2	static
+uart_modified.c:27:13:uartRXHandler	2	static
+uart_modified.c:38:6:uart_write	3	static
+uart_modified.c:83:17:uart_putchar	2	static
+uart_modified.c:49:6:uart_read	2	static
+uart_modified.c:88:17:uart_getchar	2	static
+uart_modified.c:63:6:uart_activate	2	static
+uart_modified.c:75:1:__vector_19	17	static
+uart_modified.c:78:1:__vector_18	17	static
+uart_modified.c:93:6:uart_init	2	static

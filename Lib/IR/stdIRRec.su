@@ -1,0 +1,4 @@
+stdIRRec.c:131:21:returnReceivedValue	5	static
+stdIRRec.c:150:6:IRReceiveAbort	2	static
+stdIRRec.c:154:6:IRRecTimer1CAPT	8	static
+stdIRRec.c:201:8:IRReceive	16	static

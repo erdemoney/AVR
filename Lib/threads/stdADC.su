@@ -1,0 +1,5 @@
+stdADC.c:28:17:adcHandler	2	static
+stdADC.c:40:5:__vector_21	17	static
+stdADC.c:43:8:adcRead	2	static
+stdADC.c:72:6:adcSetup	2	static
+stdADC.c:99:6:adcTerm	2	static

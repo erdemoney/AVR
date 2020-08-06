@@ -1,0 +1,4 @@
+eeprom.c:5:6:EEPROM_write	2	static
+eeprom.c:20:7:EEPROM_read	2	static
+eeprom.c:37:6:EEPROM_copy_to	8	static
+eeprom.c:46:6:EEPROM_copy_from	8	static
